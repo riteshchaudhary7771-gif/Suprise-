@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ef6a37">
+  <title>A Little Birthday Surprise 🎁</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="reel-caption">the birthday surprise is cute, but wait till<br>you unlock everything inside 🎁💌</div>
+  <main class="site-shell">
+    <div class="side-pattern"></div>
+    <section class="paper" id="app" aria-live="polite">
+      <div class="paper-top"><span>✦ a little surprise ✦</span><span>♡</span></div>
+      <div class="screen active" id="passcode-screen">
+        <div class="ornament">✿ ✧ ✿</div>
+        <div class="cake-badge"><span class="cake">🎂</span><span class="tiny-heart">♥</span></div>
+        <p class="eyebrow">A SPECIAL LITTLE SURPRISE</p>
+        <h1>Enter a passcode</h1>
+        <p class="muted">A tiny secret is waiting for you...</p>
+        <div class="pin-dots" id="pin-dots"><span></span><span></span><span></span><span></span></div>
+        <div class="keypad" id="keypad">
+          <button data-key="1">1</button><button data-key="2">2</button><button data-key="3">3</button>
+          <button data-key="4">4</button><button data-key="5">5</button><button data-key="6">6</button>
+          <button data-key="7">7</button><button data-key="8">8</button><button data-key="9">9</button>
+          <button class="soft" data-key="clear">⌫</button><button data-key="0">0</button><button class="soft" data-key="enter">↵</button>
+        </div>
+        <p class="error" id="pin-error">Wrong passcode! Try again 💌</p>
+        <p class="hint">HINT: it's your special number ✨</p>
+      </section>
+
+      <section class="screen" id="try-screen">
+        <div class="doodle">🙋🏻‍♂️</div><h2>HOW DARE YOU</h2>
+        <p class="scribble">You almost got it...</p>
+        <button class="pill-button" data-go="passcode-screen">TRY AGAIN ↻</button>
+      </section>
+
+      <section class="screen" id="intro-screen">
+        <div class="doodle big">🧸</div>
+        <h2>I have made something for you</h2>
+        <p class="scribble">Do you wanna see it?</p>
+        <div class="choice-row"><button class="pill-button" data-go="excited-screen">YES ♡</button><button class="pill-button outline" data-go="no-screen">NO</button></div>
+      </section>
+
+      <section class="screen" id="no-screen">
+        <div class="doodle big">🥺</div><h2>Oh nooo!</h2><p class="scribble">You have to see it. It's made with love 💗</p>
+        <button class="pill-button" data-go="intro-screen">OKAY, SHOW ME</button>
+      </section>
+
+      <section class="screen" id="excited-screen">
+        <div class="doodle big">🎁</div><h2>Are you really excited?</h2><p class="scribble">Because this is just for you!</p>
+        <button class="pill-button" data-go="birthday-screen">YES, I AM! ♡</button>
+      </section>
+
+      <section class="screen birthday-screen" id="birthday-screen">
+        <div class="birthday-title">HAPPY<br><strong>Birthday</strong> <span>♡</span></div>
+        <div class="birthday-art"><div class="balloon">🎈</div><div class="cake-large">🎂</div><div class="bear">🧸</div></div>
+        <p class="scribble">Today is all about you!</p>
+        <button class="pill-button" data-go="gifts-screen">OPEN YOUR GIFTS →</button>
+      </section>
+
+      <section class="screen" id="gifts-screen">
+        <h2 class="handwritten">Each gift has something for you</h2>
+        <p class="muted">Pick a little present to unlock it ✨</p>
+        <div class="gift-grid">
+          <button class="gift" data-gift="wish"><span>🎁</span><small>Gift 1</small></button>
+          <button class="gift" data-gift="memories"><span>🎁</span><small>Gift 2</small></button>
+          <button class="gift" data-gift="letter"><span>🎁</span><small>Gift 3</small></button>
+          <button class="gift" data-gift="photos"><span>🎁</span><small>Gift 4</small></button>
+        </div>
+        <p class="hint">TAP A GIFT TO OPEN IT</p>
+        <button class="text-button" data-go="wish-screen">Skip to birthday wish →</button>
+      </section>
+
+      <section class="screen" id="wish-screen">
+        <div class="cake-large">🎂</div><h2 class="handwritten">MAKE A WISH</h2>
+        <p class="scribble">Close your eyes and wish for something beautiful.</p>
+        <div class="candles">🕯️ 🕯️ 🕯️ 🕯️ 🕯️</div>
+        <button class="pill-button" id="blow-candles">BLOW THE CANDLES ✨</button>
+        <p class="muted" id="wish-message"></p>
+        <button class="text-button" data-go="gifts-screen">← Back to gifts</button>
+      </section>
+
+      <section class="screen" id="memories-screen">
+        <h2 class="handwritten">MeMoRiEs</h2>
+        <p class="muted">Little moments, big feelings 💗</p>
+        <div class="memory-grid">
+          <div class="memory-photo photo-a"><span>📸</span><small>the good times</small></div>
+          <div class="memory-photo photo-b"><span>🌷</span><small>sweet memories</small></div>
+          <div class="memory-photo photo-c"><span>☀️</span><small>you + me</small></div>
+          <div class="memory-photo photo-d"><span>💌</span><small>forever moments</small></div>
+        </div>
+        <p class="hint">Replace these cards with your own photos</p>
+        <button class="pill-button" data-go="gifts-screen">BACK TO GIFTS</button>
+      </section>
+
+      <section class="screen" id="letter-screen">
+        <div class="envelope">💌</div><h2 class="handwritten">A little note for you</h2>
+        <div class="letter-copy">You make ordinary days feel special. I hope this new year of your life brings you laughter, peaceful moments, lovely surprises and everything your heart has been waiting for. Never forget how wonderful you are. 💗</div>
+        <button class="pill-button" data-go="gifts-screen">BACK TO GIFTS</button>
+      </section>
+
+      <section class="screen" id="photos-screen">
+        <h2 class="handwritten">CUTIE, IN FRAME</h2><p class="muted">A little gallery made just for you</p>
+        <div class="portrait-grid">
+          <div class="portrait p1"><span>YOUR<br>PHOTO</span></div><div class="portrait p2"><span>YOUR<br>PHOTO</span></div><div class="portrait p3"><span>YOUR<br>PHOTO</span></div>
+        </div>
+        <p class="scribble">The world is brighter with you in it ♡</p>
+        <button class="pill-button" data-go="final-screen">ONE LAST THING →</button>
+      </section>
+
+      <section class="screen" id="final-screen">
+        <div class="confetti">✦ ✧ ♡ ✦ ✧</div>
+        <h2 class="final-message">May you achieve everything you've been waiting for!</h2>
+        <div class="doodle big">💖</div>
+        <p class="scribble">Happy Birthday! May your days be full of love, joy and magic.</p>
+        <button class="pill-button" id="restart">REPLAY THE SURPRISE ↻</button>
+      </section>
+      <div class="paper-bottom"><span>MADE WITH LOVE</span><span>♡ ✦ ♡</span></div>
+    </section>
+    <div class="side-pattern right"></div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
